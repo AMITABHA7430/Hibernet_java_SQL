@@ -25,7 +25,7 @@ public class Main {
         Transaction transaction = session.beginTransaction();
 
         session.persist(s1);//its for adding data
-        student s2=session.get(student.class,101);//to fetch the data
+        student s2=session.find(student.class,101);//to fetch the data
         System.out.println(s2);
         transaction.commit();
         session.close();
