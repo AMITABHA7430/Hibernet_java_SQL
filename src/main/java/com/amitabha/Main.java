@@ -11,7 +11,7 @@ public class Main {
 
         student s1 = new student();
 
-        s1.setAid(104);
+        s1.setAid(103);
         s1.setAname("Ayan");
         s1.setTech("c#");
 
@@ -28,6 +28,8 @@ public class Main {
 //        student s2=session.find(student.class,101);//to fetch the data
         session.merge(s1);//use to update a querry and can also create one if not exist
 //        System.out.println(s2);
+        student s2 = session.find(student.class,104);
+        session.remove(s2);//remove a tble row
         transaction.commit();
         session.close();
         sf.close();
