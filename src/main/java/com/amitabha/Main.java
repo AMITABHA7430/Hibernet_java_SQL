@@ -12,8 +12,8 @@ public class Main {
         student s1 = new student();
 
         s1.setAid(104);
-        s1.setAname("Ankita");
-        s1.setTech("cpp");
+        s1.setAname("Ayan");
+        s1.setTech("c#");
 
         Configuration config = new Configuration();
         config.addAnnotatedClass(com.amitabha.student.class);
@@ -24,9 +24,10 @@ public class Main {
         Session session = sf.openSession();
         Transaction transaction = session.beginTransaction();
 
-        session.persist(s1);//its for adding data
-        student s2=session.find(student.class,101);//to fetch the data
-        System.out.println(s2);
+//        session.persist(s1);//its for adding data
+//        student s2=session.find(student.class,101);//to fetch the data
+        session.merge(s1);//use to update a querry and can also create one if not exist
+//        System.out.println(s2);
         transaction.commit();
         session.close();
         sf.close();
