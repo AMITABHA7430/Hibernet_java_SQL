@@ -1,8 +1,14 @@
-package org.amitabha;
+package com.amitabha;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 
 import java.security.PrivateKey;
+@Entity
 
 public class student {
+    @Id
     private int aid;
     private String aname;
     private String tech;
