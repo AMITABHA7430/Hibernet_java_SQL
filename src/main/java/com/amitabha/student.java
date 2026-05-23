@@ -1,14 +1,16 @@
 package com.amitabha;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 
 import java.security.PrivateKey;
-@Entity
+@Entity(name="ami_student")//change the name of the table
 
 public class student {
     @Id
+    @Column(name = "A_id")//similar this can be use to change the column name
     private int aid;
     private String aname;
     private String tech;
